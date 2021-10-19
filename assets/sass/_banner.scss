@@ -46,6 +46,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    --webkit-gap: 34px;
     gap: 34px;
     &__item {
       z-index: 10;
@@ -77,9 +78,9 @@
     }
   }
   @include responsive_767 {
-    &-text{
-      &__center{
-        & h1{
+    &-text {
+      &__center {
+        & h1 {
           font-size: 40px;
         }
       }
@@ -108,6 +109,7 @@
       }
       &-button {
         flex-wrap: wrap;
+        --webkit-gap: 17px;
         gap: 17px;
         &__item {
           button {

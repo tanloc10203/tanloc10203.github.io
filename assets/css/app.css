@@ -112,7 +112,7 @@ html {
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 1000;
+  z-index: 99999;
   top: 0;
   left: 0;
   width: 100%;
@@ -286,6 +286,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  --webkit-gap: 34px;
   gap: 34px;
 }
 .banner-button__item {
@@ -345,6 +346,7 @@ html {
   }
   .banner-button {
     flex-wrap: wrap;
+    --webkit-gap: 17px;
     gap: 17px;
   }
   .banner-button__item button {
