@@ -42,14 +42,15 @@
     }
   }
   &-button {
+    --space: 34px;
     margin-top: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    --webkit-gap: 34px;
-    gap: 34px;
+    margin-left: calc(-1 * var(--space));
     &__item {
       z-index: 10;
+      margin-left: var(--space);
       button {
         color: #fff;
         background: transparent;
@@ -109,8 +110,7 @@
       }
       &-button {
         flex-wrap: wrap;
-        --webkit-gap: 17px;
-        gap: 17px;
+        --space: 17px;
         &__item {
           button {
             color: $color-red;

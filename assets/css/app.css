@@ -282,15 +282,16 @@ html {
   text-align: center;
 }
 .banner-button {
+  --space: 34px;
   margin-top: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  --webkit-gap: 34px;
-  gap: 34px;
+  margin-left: calc(-1 * var(--space));
 }
 .banner-button__item {
   z-index: 10;
+  margin-left: var(--space);
 }
 .banner-button__item button {
   color: #fff;
@@ -346,8 +347,7 @@ html {
   }
   .banner-button {
     flex-wrap: wrap;
-    --webkit-gap: 17px;
-    gap: 17px;
+    --space: 17px;
   }
   .banner-button__item button {
     color: #fa4a0c;
@@ -701,10 +701,14 @@ html {
   margin-bottom: 53px;
 }
 .copyright-contacts {
+  --space: 24px;
   display: flex;
   align-items: center;
-  gap: 24px;
   cursor: pointer;
+  margin-left: calc(-1 * var(--space));
+}
+.copyright-contacts a {
+  margin-left: var(--space);
 }
 .copyright p {
   color: #737373;

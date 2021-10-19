@@ -2,10 +2,15 @@
   margin-top: 38px;
   margin-bottom: 53px;
   &-contacts {
+    --space: 24px;
     display: flex;
     align-items: center;
-    gap: 24px;
+    // gap: 24px;
     cursor: pointer;
+    margin-left: calc(-1 * var(--space));
+    & a{
+      margin-left: var(--space);
+    }
   }
   & p {
     color: $color-secondary;
