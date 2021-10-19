@@ -1,0 +1,68 @@
+.copyright {
+  margin-top: 38px;
+  margin-bottom: 53px;
+  &-contacts {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+  }
+  & p {
+    color: $color-secondary;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: right;
+    letter-spacing: 0.1px;
+  }
+
+  @include responsive_414 {
+    & {
+      & .container {
+        margin: 0 84px;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        & > img {
+          display: none;
+        }
+      }
+    }
+  }
+  @include responsive_767 {
+    & {
+      & .container {
+        margin: 0 30px;
+      }
+    }
+  }
+  @include responsive_750 {
+    & {
+      & .container {
+        margin: 0 77px;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        & > img {
+          display: none;
+        }
+      }
+    }
+  }
+  @include responsive_375 {
+    & {
+      & .container {
+        margin: 0 40px;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        & > img {
+          display: none;
+        }
+      }
+    }
+  }
+}

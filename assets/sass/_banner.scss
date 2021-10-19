@@ -1,0 +1,138 @@
+.banner {
+  background: url(../images/banner_home.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 619px;
+  width: 100%;
+  &-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    max-width: 1005px;
+    margin: 0 auto;
+    padding-top: 73px;
+    letter-spacing: 0.2px;
+    line-height: 150%;
+    p {
+      font-weight: bold;
+      font-style: normal;
+      font-size: 24px;
+    }
+    h4 {
+      font-weight: 500;
+      font-size: 24px;
+      padding: 10px 88px 48px 89px;
+      text-align: center;
+    }
+    &__center {
+      margin: 7px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 40px;
+      justify-content: center;
+      padding: 10px 33px;
+
+      & h1 {
+        line-height: 138%;
+        text-align: center;
+      }
+    }
+  }
+  &-button {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+    &__item {
+      z-index: 10;
+      button {
+        color: #fff;
+        background: transparent;
+        outline: none;
+        padding: 16px 58px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 150%;
+        letter-spacing: 0.1px;
+        transition: $delay-2s;
+        border: 1px solid #fff;
+        border-radius: 30px;
+        &:hover {
+          background: $color-red;
+          border-color: $color-red;
+        }
+      }
+      &.active {
+        border-radius: 30px;
+        background: $color-red;
+        button {
+          border-color: $color-red;
+        }
+      }
+    }
+  }
+  @include responsive_767 {
+    &-text{
+      &__center{
+        & h1{
+          font-size: 40px;
+        }
+      }
+    }
+  }
+  @include responsive_414 {
+    & {
+      background: transparent;
+      &-text {
+        color: #000;
+        p {
+          font-size: 16px;
+          color: $color-secondary;
+        }
+        h4 {
+          padding: 10px 24px 48px 24px;
+          text-align: center;
+          color: $color-secondary;
+        }
+        &__center {
+          color: #252b42;
+          font-size: 36px;
+          text-align: center;
+          padding: 0;
+        }
+      }
+      &-button {
+        flex-wrap: wrap;
+        gap: 17px;
+        &__item {
+          button {
+            color: $color-red;
+            border-color: $color-red;
+            &:hover {
+              color: #fff;
+            }
+          }
+          &.active {
+            button {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive_375 {
+    & {
+      &-text {
+        & h4 {
+          padding: 10px 0px 48px 0px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.scroll-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background: rgba(243, 243, 243, 0.9);
+  -webkit-clip-path: polygon(50% 1%, 1% 100%, 100% 100%);
+  clip-path: polygon(50% 1%, 1% 100%, 100% 100%);
+  cursor: pointer;
+  animation: rotate-up 1s cubic-bezier(0, 0.56, 0.43, 0.96) infinite forwards;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  transition: $delay-2s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: inherit;
+    background: $color-red;
+    width: inherit;
+    z-index: -1;
+    // transform: translateX(40px);
+  }
+  &:hover::before {
+    animation: rotate-left 0.3s linear forwards;
+  }
+
+  @include responsive_414 {
+    // & {
+    //   bottom: 60px;
+    //   right: 229px;
+    // }
+  }
+}
+@keyframes rotate-up {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.presently {
+  visibility: visible;
+  opacity: 1;
+}
