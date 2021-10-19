@@ -348,6 +348,11 @@ html {
   .banner-button {
     flex-wrap: wrap;
     --space: 17px;
+    margin-bottom: calc(-1 * var(--space));
+  }
+  .banner-button__item {
+    margin-left: 0;
+    margin-bottom: var(--space);
   }
   .banner-button__item button {
     color: #fa4a0c;

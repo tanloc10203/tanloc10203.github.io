@@ -111,7 +111,10 @@
       &-button {
         flex-wrap: wrap;
         --space: 17px;
+        margin-bottom: calc(-1 * var(--space));
         &__item {
+          margin-left: 0;
+          margin-bottom: var(--space);
           button {
             color: $color-red;
             border-color: $color-red;
