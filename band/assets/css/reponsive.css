@@ -1,0 +1,127 @@
+/*
+* ------------------------------------------------- 
+*  Pc >= 1024px
+*  Tablet >= 740px & < 1024px
+*  Moblie < 740px
+*  ------------------------------------------------
+*/
+
+/* PC */
+@media (min-width: 64em) {
+}
+
+/* Tablet */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+  .modal-content{
+    max-width: 80%;
+  }
+}
+
+/* Moblie */
+@media (max-width: 46.1875em) {
+  #content .content-section {
+    max-width: 100%;
+  }
+  #header {
+    overflow: hidden;
+  }
+  #wrapper {
+    overflow: hidden;
+  }
+
+  #nav {
+    display: block;
+  }
+
+  #nav > li:first-child {
+    display: inline-block;
+  }
+
+  #nav .subnav {
+    position: unset;
+    background-color: #333;
+  }
+  #nav .subnav a {
+    padding: 5px 50px;
+    color: #fff;
+  }
+
+  #nav > li {
+    display: block;
+  }
+
+  #header .icon .icon-search,
+  #header .icon a {
+    display: none;
+  }
+
+  .icon span {
+    display: block;
+    line-height: 46px;
+    padding: 0 24px;
+  }
+
+  .mobile-menu-btn:hover {
+    color: #000;
+    background-color: #ccc;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .text-head {
+    display: none;
+  }
+
+  #content .about-content {
+    list-style: 1.4;
+  }
+
+  .col-sm-full {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  .mt-1 {
+    margin-top: 16px;
+  }
+
+  input.submit {
+    width: 100%;
+    margin: 0;
+  }
+
+  .modal-content{
+    max-width: 90%;
+  }
+  #ticketModal{
+    padding-top: 50px;
+  }
+}
+
+@media screen and (min-width: 46em) {
+  .col-md-3 {
+    width: 33.3333%;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .col-md-3 {
+    width: 33.3333%;
+  }
+}
+
+
+@media screen and (min-width: 35.5em) {
+  .col-md-3 {
+    width: 33.3333%;
+  }
+}

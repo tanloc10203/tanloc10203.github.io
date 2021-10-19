@@ -1,0 +1,466 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+/* common */
+
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-3 {
+  width: 33.3333%;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.clear {
+  clear: both;
+}
+
+/* CSS HEADER */
+
+#header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 46px;
+  background-color: #000;
+  color: #fff;
+}
+
+#header .icon {
+  float: right;
+}
+
+#header .icon a {
+  line-height: 46px;
+  padding: 0 23px;
+}
+
+#header .icon:hover {
+  cursor: pointer;
+  background-color: #f44336;
+}
+
+#header .icon .icon-search {
+  font-size: 14px;
+  color: #fff;
+}
+
+.mobile-menu-btn {
+  display: none;
+  float: right;
+  line-height: 46px;
+  padding: 0 16px;
+}
+
+#nav {
+  display: inline-block;
+}
+
+#nav li {
+  position: relative;
+  display: inline-block;
+}
+
+#nav li:hover > a {
+  background-color: #ccc;
+  color: #000;
+}
+
+#nav li:hover .subnav {
+  display: block;
+}
+
+#nav li a {
+  display: block;
+  padding: 0 22px;
+  line-height: 46px;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+}
+
+#nav .subnav {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav li {
+  display: block;
+}
+
+#nav .subnav a {
+  text-transform: capitalize;
+  padding: 0px 44px 0px 16px;
+  line-height: 38px;
+}
+
+/* CSS SLIDER */
+
+#slide {
+  position: relative;
+  margin-top: 46px;
+}
+
+#slide .slide-item .text-head {
+  position: absolute;
+  width: 100%;
+  bottom: 47px;
+  color: #fff;
+  text-align: center;
+}
+
+#slide .text-head h3 {
+  margin: 25px 0;
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 0 0 7px #000;
+}
+
+#slide .text-head b {
+  font-size: 14px;
+  text-shadow: 0 0 7px #000;
+}
+
+.thumb-slide {
+  width: 2000px;
+  max-width: 100%;
+  height: auto;
+}
+
+.slide-item {
+  display: none;
+}
+
+/* CSS CONTENT */
+
+/* CSS ABOUT */
+#content .content-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 64px 16px;
+  text-align: center;
+}
+
+#content .section-head {
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+#content .section-sub-head {
+  margin: 15px 0;
+  font-style: italic;
+  font-weight: 300;
+  opacity: 0.6;
+}
+
+#content .about-content {
+  margin: 15px 0;
+  text-align: justify;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.content-section .members {
+  padding: 32px 0;
+}
+
+.members .name {
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+.members .thumb {
+  width: 60%;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+
+/* CSS TOUR */
+
+.tour {
+  background-color: #000;
+  color: #fff;
+}
+
+.tour .order-ticker {
+  margin-top: 32px;
+  background-color: #fff;
+  color: #000;
+}
+
+.tour .order-ticker li {
+  padding: 10px 16px;
+  border-bottom: 1px solid #ddd;
+  color: #757575;
+  list-style: none;
+  text-align: left;
+}
+
+.tour .status {
+  background-color: #f44336;
+  color: #fff;
+  font-weight: 400;
+  margin-left: 16px;
+  padding: 2px 8px;
+}
+
+.tour .quantity {
+  width: 24px;
+  height: 22px;
+  float: right;
+  margin-right: 16px;
+  padding: 1px 7px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+}
+
+/* CSS ticketModal */
+
+#ticketModal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 100px;
+  z-index: 3;
+}
+.modal-content {
+  width: 900px;
+  margin: 0 auto;
+}
+
+h2.head-modal {
+  text-align: center;
+  padding: 46px 0;
+  background-color: #009688;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.body-modal {
+  padding: 16px;
+  background-color: #fff;
+}
+
+.form-label {
+  margin-bottom: 15px;
+  display: block;
+}
+
+.form-label i{
+  margin-right: 6px;
+}
+input.form-control.ticket-input {
+  margin-bottom: 15px;
+}
+
+.pay {
+  width: 100%;
+  font-size: 15px;
+  outline: none;
+  margin-bottom: 16px;
+  padding: 16px 0;
+  border: none;
+  background-color: #009688;
+  cursor: pointer;
+}
+
+.icon-check,
+.icon-close {
+  padding: 0px 6px;
+}
+
+button.close {
+  padding: 11px 14px;
+  color: #fff;
+  background-color: #f44336;
+  outline: none;
+  border: none;
+  margin: 14px 0;
+  cursor: pointer;
+}
+
+p.help {
+  float: right;
+  margin-top: 15px;
+}
+
+p.help::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* Places */
+
+.places {
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+
+.thumb-places {
+  display: block;
+  max-width: 100%;
+}
+
+.thumb-places:hover {
+  opacity: 0.6;
+}
+
+.place-body {
+  background-color: #fff;
+  color: #000;
+  text-align: left;
+  padding: 16px;
+}
+
+.place-head {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.place-date {
+  opacity: 0.6;
+  margin-bottom: 15px;
+}
+
+.places-description {
+  margin-bottom: 15px;
+}
+
+.place-order {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 16px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+}
+
+.place-order:hover {
+  color: #000;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+/* CSS contacts */
+
+.row.contact-content {
+  padding: 32px 0;
+}
+
+.col.col-half.contact-info {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.col.col-half.contact-info p {
+  padding: 6px 0px;
+  font-size: 18px;
+}
+
+.col.col-half.contact-info i {
+  width: 30px;
+}
+
+input.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  display: block;
+  font: inherit;
+  border: 1px solid #ccc;
+}
+
+input.submit {
+  float: right;
+  margin: 16px 0;
+  padding: 12px 16px;
+  background-color: #000;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+input.submit:hover {
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+}
+
+/* map  */
+
+.map {
+  filter: grayscale(50%);
+  max-width: 100%;
+}
+
+/* Footer */
+
+#footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+.socials-list {
+  font-size: 24px;
+}
+
+.socials-list a,
+#footer p,
+#footer p a {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.socials-list a:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+#footer p {
+  margin: 15px 0;
+}
