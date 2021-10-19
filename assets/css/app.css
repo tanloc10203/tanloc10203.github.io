@@ -353,6 +353,7 @@ html {
   .banner-button__item {
     margin-left: 0;
     margin-bottom: var(--space);
+    margin-bottom: 17px;
   }
   .banner-button__item button {
     color: #fa4a0c;
