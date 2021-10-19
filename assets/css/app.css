@@ -112,7 +112,7 @@ html {
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 99999;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
@@ -178,7 +178,7 @@ html {
   display: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out 0s;
-  z-index: 9999;
+  z-index: 900;
 }
 .header-bars:hover {
   opacity: 0.6;
