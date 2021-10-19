@@ -370,6 +370,26 @@ html {
   .banner-text h4 {
     padding: 10px 0px 48px 0px;
   }
+  .banner-button {
+    flex-wrap: wrap;
+    --space: 17px;
+    margin-bottom: calc(-1 * var(--space));
+  }
+  .banner-button__item {
+    margin-left: 0;
+    margin-bottom: var(--space);
+    margin-bottom: 17px;
+  }
+  .banner-button__item button {
+    color: #fa4a0c;
+    border-color: #fa4a0c;
+  }
+  .banner-button__item button:hover {
+    color: #fff;
+  }
+  .banner-button__item.active button {
+    color: #fff;
+  }
 }
 
 .app-works--image {
